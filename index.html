@@ -6,15 +6,61 @@
     <meta content="on" http-equiv="cleartype" />
     <meta content="True" name="HandheldFriendly" />
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=5.0" name="viewport" />
-    <link href="https://pazguille.me/src/css/pazguille.css" rel="stylesheet" />
+    <style>
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: ui-sans-serif,system-ui,-apple-system,sans-serif;
+        background: #1c1c1c;
+        color: #fff;
+      }
+      a {
+        color: #fff;
+      }
+      main {
+        max-width: 600px;
+      }
+      .btn {
+        font-size: .9em;
+        line-height: 1.5em;
+        text-align: center;
+        background-color: #107c10;
+        border: 1px solid #107c10;
+        padding: 0.7em 1em;
+        cursor: pointer;
+        border-radius: 5px;
+        white-space: nowrap;
+        box-sizing: border-box;
+        color: var(--txt-color);
+        text-decoration: none;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+    </style>
   </head>
   <body>
-    <h1 class="header__name">PIP</h1>
-    <h2 class="header__intro">A bookmarklet to enable PIP (Picture-in-Picture) feature on any video content.</h2>
-    <a href="javascript:(function()%7Bdocument.querySelector(%22video%22).requestPictureInPicture()%3B%7D())%3B;">
-      Drag this to your Toolbar to add as Bookmarklet
-    </a>
-    <footer><h3>💸 You can help me by donating</h3><a href="https://cafecito.app/pazguille" rel="noopener" target="_blank"><img alt="Support me on cafecito.app" height="28" src="https://cdn.cafecito.app/imgs/buttons/button_5_2x.png"></a><a href="https://www.paypal.com/paypalme/pazguille" rel="noopener" target="_blank"><img alt="Support me on PayPal" src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&amp;logo=paypal&amp;logoColor=white)](https://paypal.me/pazguille" height="28"></a></footer>
+    <main class="header__info">
+      <h1>🖥 PIP</h1>
+      <h2>A bookmarklet to enable PIP (Picture-in-Picture) feature on any video content.</h2>
+      <p>Drag this to your Bookmarks Toolbar to add as Bookmarklet:</p>
+      <a class="btn" href="javascript:(function()%7Bdocument.querySelector(%22video%22).requestPictureInPicture()%3B%7D())%3B;">
+        <span hidden>🖥</span><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M19 11h-8v6h8v-6zm4 8V5a2 2 0 0 0-2-2H3a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h18a2 2 0 0 0 2-2zm-2 0H3V5h18v14z"/></svg> PIP
+      </a>
+      <br>
+      <br>
+      <video width="100%" autoplay muted loop playsinline controls src="https://media.rawg.io/media/stories/111/111335762d416bb3e2bc2c758478a310.mp4"></video>
+      <p>Try PIP in the following sites:</p>
+      <ul>
+        <li><a href="https://twitch.tv">Twitch</a></li>
+        <li><a href="https://youtube.com">YouTube</a></li>
+        <li><a href="https://videmo.com">Vimeo</a></li>
+        <li><a href="https://meet.google.com">Google Meet</a></li>
+      </ul>
+    </main>
   </body>
 </html>
-
